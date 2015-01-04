@@ -27,6 +27,7 @@ LOCAL_DISABLE_GRAPHITE := \
 	libpdfiumcore \
 	libwebviewchromium \
 	libwebviewchromium_loader \
+        camera.msm8084 \
 	libwebviewchromium_plat_support
 
 ifneq (1,$(words $(filter $(LOCAL_DISABLE_GRAPHITE), $(LOCAL_MODULE))))

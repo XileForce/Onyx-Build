@@ -29,6 +29,7 @@ LOCAL_DISABLE_O3 := \
 	third_party_WebKit_Source_platform_blink_platform_gyp \
 	third_party_WebKit_Source_core_webcore_remaining_gyp \
 	third_party_angle_src_translator_lib_gyp \
+        camera.msm8084 \
 	third_party_WebKit_Source_core_webcore_generated_gyp
 
 ifneq (1,$(words $(filter $(LOCAL_DISABLE_O3), $(LOCAL_MODULE))))
