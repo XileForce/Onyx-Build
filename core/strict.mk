@@ -15,6 +15,7 @@
 
 LOCAL_DISABLE_STRICT := \
 	libc_bionic \
+	libstlport_static \
 	libc_dns \
 	libc_tzcode \
 	libziparchive \
