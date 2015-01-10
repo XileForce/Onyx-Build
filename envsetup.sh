@@ -653,7 +653,7 @@ function lunch()
     set_stuff_for_environment
     printconfig
 }
-
+export PRODUCT_PREBUILT_WEBVIEWCHROMIUM=1
 # Tab completion for lunch.
 function _lunch()
 {

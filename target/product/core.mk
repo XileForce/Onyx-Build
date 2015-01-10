@@ -37,7 +37,8 @@ PRODUCT_PACKAGES += \
     KeyChain \
     Keyguard \
     LatinIME \
-    Launcher3 \
+    Trebuchet \
+    CMFileManager \
     ManagedProvisioning \
     PacProcessor \
     libpac \
