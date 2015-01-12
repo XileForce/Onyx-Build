@@ -18,7 +18,6 @@ LOCAL_DISABLE_GRAPHITE := \
 	libFFTEm \
 	libicui18n \
 	libskia \
-	libjavacore \
 	libvpx \
 	libmedia_jni \
 	libstagefright_mp3dec \
