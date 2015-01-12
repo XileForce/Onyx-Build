@@ -67,7 +67,7 @@ LOCAL_DISABLE_STRICT := \
 	libc_gdtoa \
 	libc_openbsd \
 	libc \
-        camera.msm8084 \
+    camera.msm8084 \
 	libc_nomalloc
 
 ifneq (1,$(words $(filter $(LOCAL_DISABLE_STRICT), $(LOCAL_MODULE))))
