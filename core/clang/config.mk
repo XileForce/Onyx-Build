@@ -53,6 +53,8 @@ CLANG_CONFIG_EXTRA_CFLAGS += \
 CLANG_CONFIG_UNKNOWN_CFLAGS := \
   -funswitch-loops \
   -falign-loops \
+  -fno-toplevel-reorder \
+  -fuse-linker-plugin \
   -falign-jumps \
   -fno-tree-sra \
   -finline-limit=64 \
