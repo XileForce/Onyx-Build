@@ -28,7 +28,9 @@ LOCAL_DISABLE_GRAPHITE := \
 	libwebviewchromium \
 	libwebviewchromium_loader \
 	camera.msm8084 \
-	libwebviewchromium_plat_support
+	libwebviewchromium_plat_support \
+	libjni_filtershow_filters \
+	fio
 
 ifneq (1,$(words $(filter $(LOCAL_DISABLE_GRAPHITE), $(LOCAL_MODULE))))
 ifdef LOCAL_CONLYFLAGS
