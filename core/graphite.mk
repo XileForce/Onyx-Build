@@ -30,6 +30,9 @@ LOCAL_DISABLE_GRAPHITE := \
 	camera.msm8084 \
 	libwebviewchromium_plat_support \
 	libjni_filtershow_filters \
+	libavcodec \
+	libjavacore \
+	libSR_Core \
 	fio
 
 ifneq (1,$(words $(filter $(LOCAL_DISABLE_GRAPHITE), $(LOCAL_MODULE))))
