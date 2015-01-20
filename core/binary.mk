@@ -112,9 +112,8 @@ endif
 # limitations under the License.
 #
 # Include custom gcc flags.  Seperate them so they can be easily managed.
-ifeq ($(STRICT_ALIASING),true)
+
 include $(BUILD_SYSTEM)/strict.mk
-endif
 
 ifeq ($(ENABLE_MODULAR_O3),true)
 ifndef LOCAL_IS_HOST_MODULE

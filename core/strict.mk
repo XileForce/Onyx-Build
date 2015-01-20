@@ -13,6 +13,8 @@
 # limitations under the License.
 #
 
+ifeq ($(STRICT_ALIASING),true)
+
 LOCAL_DISABLE_STRICT := \
 	libc_bionic \
 	libstlport_static \
@@ -75,7 +77,10 @@ LOCAL_FORCE_DISABLE_STRICT := \
 	libziparchive-host \
 	libc_bionic \
 	libc_dns \
-	libziparchive
+	libziparchive \
+	libdiskconfig \
+	logd \
+	libjavacore
 
 ifeq (1,$(words $(filter $(LOCAL_FORCE_DISABLE_STRICT),$(LOCAL_MODULE))))
 ifdef LOCAL_CONLYFLAGS
@@ -127,4 +132,34 @@ LOCAL_CPPFLAGS += \
 	-Wstrict-aliasing=2
 endif
 endif
+
+else
+# Force no strict-aliasing on some modules
+LOCAL_FORCE_DISABLE_STRICT := \
+	libziparchive-host \
+	libc_bionic \
+	libc_dns \
+	libziparchive \
+	libdiskconfig \
+	logd \
+	libjavacore
+
+ifeq (1,$(words $(filter $(LOCAL_FORCE_DISABLE_STRICT),$(LOCAL_MODULE))))
+ifdef LOCAL_CONLYFLAGS
+LOCAL_CONLYFLAGS += \
+	-fno-strict-aliasing
+else
+LOCAL_CONLYFLAGS := \
+	-fno-strict-aliasing
+endif
+ifdef LOCAL_CPPFLAGS
+LOCAL_CPPFLAGS += \
+	-fno-strict-aliasing
+else
+LOCAL_CPPFLAGS := \
+	-fno-strict-aliasing
+endif
+endif
+endif
+
 #####
