@@ -32,7 +32,7 @@ LOCAL_DISABLE_O3 := \
 	third_party_WebKit_Source_core_webcore_generated_gyp
 
 ifneq (1,$(words $(filter $(LOCAL_DISABLE_O3), $(LOCAL_MODULE))))
-ifndef LOCAL_CONLYFLAGS
+ifdef LOCAL_CONLYFLAGS
 LOCAL_CONLYFLAGS += -O2 \
 	-finline-functions \
 	-funswitch-loops \

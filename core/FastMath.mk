@@ -14,11 +14,14 @@ LOCAL_DISABLE_FM := \
     third_party_sqlite_sqlite_gyp \
     libart-compiler \
     conscrypt \
+    libmincrypt \
+    libf2fs_fmt \
     libjavacore \
+    init \
     libstlport
 
 ifneq (1,$(words $(filter $(LOCAL_DISABLE_FM), $(LOCAL_MODULE))))
-ifdef LOCAL_CONLYFLAGS
+ifdef LOCAL_CFLAGS
 LOCAL_CFLAGS += \
     -ffast-math
 else

@@ -116,18 +116,6 @@ ifeq ($(STRICT_ALIASING),true)
 include $(BUILD_SYSTEM)/strict.mk
 endif
 
-ifeq ($(Fast_Math),true)
-include $(BUILD_SYSTEM)/FastMath.mk
-endif
-
-ifeq ($(Link_Time_Optimizations),true)
-ifneq ($(strip $(LOCAL_CLANG)),true)
-ifeq ($(strip $(LOCAL_IS_HOST_MODULE)),)
-include $(BUILD_SYSTEM)/LTO.mk
-endif
-endif
-endif
-
 ifeq ($(ENABLE_MODULAR_O3),true)
 ifndef LOCAL_IS_HOST_MODULE
 ifeq ($(LOCAL_CLANG),)
@@ -150,10 +138,26 @@ endif
 endif
 endif
 
+ifeq ($(C++11),true)
+include $(BUILD_SYSTEM)/C++11.mk
+endif
+
 ifeq ($(GRAPHITE_OPTS),true)
 ifndef LOCAL_IS_HOST_MODULE
 ifeq ($(LOCAL_CLANG),)
 include $(BUILD_SYSTEM)/graphite.mk
+endif
+endif
+endif
+
+ifeq ($(Fast_Math),true)
+include $(BUILD_SYSTEM)/FastMath.mk
+endif
+
+ifeq ($(Link_Time_Optimizations),true)
+ifneq ($(strip $(LOCAL_CLANG)),true)
+ifeq ($(strip $(LOCAL_IS_HOST_MODULE)),)
+include $(BUILD_SYSTEM)/LTO.mk
 endif
 endif
 endif

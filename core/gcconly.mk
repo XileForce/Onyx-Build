@@ -16,11 +16,12 @@
 LOCAL_DISABLE_GCCONLY := \
 	bluetooth.default \
 	libwebviewchromium \
+	libavcodec \
 	libwebviewchromium_loader \
 	libwebviewchromium_plat_support
 
 ifneq (1,$(words $(filter $(LOCAL_DISABLE_GCCONLY), $(LOCAL_MODULE))))
-ifndef LOCAL_CONLYFLAGS
+ifdef LOCAL_CONLYFLAGS
 LOCAL_CONLYFLAGS += -fira-loop-pressure \
 	-fforce-addr \
 	-funsafe-loop-optimizations \

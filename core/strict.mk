@@ -71,7 +71,7 @@ LOCAL_DISABLE_STRICT := \
 	libc_nomalloc
 
 ifneq (1,$(words $(filter $(LOCAL_DISABLE_STRICT), $(LOCAL_MODULE))))
-ifndef LOCAL_CONLYFLAGS
+ifdef LOCAL_CONLYFLAGS
 LOCAL_CONLYFLAGS += \
 	-fstrict-aliasing \
 	-Werror=strict-aliasing
@@ -90,7 +90,7 @@ LOCAL_CPPFLAGS := \
 	-fstrict-aliasing \
 	-Werror=strict-aliasing
 endif
-ifndef LOCAL_CLANG
+ifdef LOCAL_CLANG
 LOCAL_CONLYFLAGS += \
 	-Wstrict-aliasing=3
 LOCAL_CPPFLAGS += \

@@ -45,7 +45,7 @@ LOCAL_DISABLE_LTO := \
     init
 
 ifneq (1,$(words $(filter $(LOCAL_DISABLE_LTO), $(LOCAL_MODULE))))
-ifdef LOCAL_CONLYFLAGS
+ifdef LOCAL_CFLAGS
 LOCAL_CFLAGS += \
     -flto=jobserver \
     -fuse-linker-plugin \
