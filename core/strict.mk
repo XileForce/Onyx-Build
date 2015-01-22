@@ -17,9 +17,15 @@ ifeq ($(STRICT_ALIASING),true)
 
 LOCAL_DISABLE_STRICT := \
 	libc_bionic \
+	adbd \
+	libcutils \
+	liblog \
 	libstlport_static \
 	libc_dns \
+	libjemalloc \
+	init \
 	libc_tzcode \
+	libfs_mgr \
 	libziparchive \
 	libtwrpmtp \
 	libfusetwrp \
