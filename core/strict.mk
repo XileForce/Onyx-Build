@@ -16,18 +16,19 @@
 ifeq ($(STRICT_ALIASING),true)
 
 LOCAL_DISABLE_STRICT := \
-	libc_bionic \
 	adbd \
 	libcutils \
 	liblog \
 	libstlport_static \
-	libc_dns \
 	libjemalloc \
 	init \
 	libc_tzcode \
 	libfs_mgr \
 	libziparchive \
 	libtwrpmtp \
+	libcrypto \
+	libminivold \
+	libext4_utils \
 	libfusetwrp \
 	libguitwrp \
 	busybox \
@@ -35,13 +36,16 @@ LOCAL_DISABLE_STRICT := \
 	libziparchive-host \
 	libpdfiumcore \
 	libandroid_runtime \
-	libmedia \
 	libpdfiumcore \
 	libpdfium \
 	bluetooth.default \
 	logd \
+	bu_recovery \
+	libminzip \
 	mdnsd \
 	net_net_gyp \
+	libbusybox \
+	libfusesideload \
 	libstagefright_webm \
 	libaudioflinger \
 	libmediaplayerservice \
@@ -60,7 +64,6 @@ LOCAL_DISABLE_STRICT := \
 	libvisualizer \
 	libstlport \
 	libutils \
-	libandroidfw \
 	dnsmasq \
 	static_busybox \
 	libwebviewchromium \
@@ -73,16 +76,24 @@ LOCAL_DISABLE_STRICT := \
 	third_party_angle_src_translator_lib_gyp \
 	third_party_WebKit_Source_core_webcore_generated_gyp \
 	libc_gdtoa \
+	libext4_utils_static \
+	libselinux \
+	libvold \
+	libext2fs \
+	recovery_e2fsck \
 	libc_openbsd \
+	recovery_tune2fs \
+	libext2_blkid \
+	libcrypto_static \
 	libc \
+	libfuse \
+	libsdcard \
     camera.msm8084 \
 	libc_nomalloc
 
 # Force no strict-aliasing on some modules
 LOCAL_FORCE_DISABLE_STRICT := \
 	libziparchive-host \
-	libc_bionic \
-	libc_dns \
 	libziparchive \
 	libdiskconfig \
 	logd \
@@ -143,8 +154,6 @@ else
 # Force no strict-aliasing on some modules
 LOCAL_FORCE_DISABLE_STRICT := \
 	libziparchive-host \
-	libc_bionic \
-	libc_dns \
 	libziparchive \
 	libdiskconfig \
 	logd \
