@@ -177,10 +177,11 @@ LOCAL_DISABLE_NEST := \
 	libwebrtc_system_wrappers \
 	libwebrtc_aecm \
 	libreverb \
+	libreverbwrapper \
+	libwebrtc_resampler \
 	libwifi-service \
 	libstlport_static \
 	libgtest \
-	libwebrtc_audio \
 	backtrace_test \
 	libbz
 

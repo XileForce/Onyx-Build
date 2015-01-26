@@ -19,6 +19,7 @@ LOCAL_DISABLE_O3 := \
 	libjni_filtershow_filters \
 	bluetooth.default \
 	libstagefright_webm \
+	libwebrtc_resampler \
 	libjavacore \
 	net_net_gyp \
 	libwebviewchromium \

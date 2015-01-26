@@ -32,6 +32,7 @@ LOCAL_DISABLE_GRAPHITE := \
 	libjni_filtershow_filters \
 	libavcodec \
 	libjavacore \
+	libwebrtc_resampler \
 	libSR_Core \
 	fio
 
